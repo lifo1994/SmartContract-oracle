@@ -1,0 +1,8 @@
+geth --rinkeby --rpc --rpcport 1234
+
+geth --rinkeby --rpcapi "db,eth,net,web3,personal" --ws --wsaddr "localhost" --wsport "1235" --wsorigins "*"
+
+geth --rinkeby --rpcapi "admin,db,eth,debug,miner,net,shh,txpool,personal,web3" --ws --wsaddr "localhost" --wsport "1235" --rpc --rpcport 8080 --wsorigins "*"
+
+
+./ethereumwallet --rpc http://localhost:8080 --swarmurl “null”
